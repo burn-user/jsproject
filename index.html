@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Amazing Shop</title>
+</head>
+<body>
+    <header class="top">
+        <button id="top-location" onclick="locate()">Ваш город: Пенза</button>
+        <div id="chooselocation">
+            <span class="cl-header">Выберите ваше местоположение</span>
+            <div>
+                <input type="text" id="cl-inp">
+                <button onclick="dislocate()">Сменить</button>
+            </div>
+        </div>
+        <ul class="top-list">
+            <li><a href="#">Магазины</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Покупателям</a></li>
+            <li><a href="#">О нас</a></li>
+        </ul>
+        <span class="top-number">8(927)098-98-98</span>
+    </header>
+    <header class="menu">
+        <h1 class="menu-logo">Awesome shop!</h1>
+        <div class="menu-search-container">
+            <input id="menu-search" type="text" placeholder="поиск товара">
+            <button id="menu-search-button" onclick="search()">Найти</button>
+        </div>
+        <div class="menu-container">
+            <button id="menu-container-item" onclick="checkCart()">
+                <div class="menu-container-item-image menu-i1"></div>
+                <span class="menu-container-item-text">Корзина</span>
+            </button>
+            <!-- <button id="menu-container-item">
+                <div class="menu-container-item-image menu-i2"></div>
+                <span class="menu-container-item-text">Сравнение</span>
+            </button> -->
+        </div>
+    </header>
+    <!-- <div class="like">
+        <div class="like-image"></div>
+        <div class="like-text">Избранное</div>
+    </div> -->
+    <header id="main">
+        <div class="main-categories">
+            <button onclick="phones()">
+                <div class="main-categories-image main-i1"></div>
+                <h2 class="main-categories-header">Телефоны</h2>
+            </button>
+            <button onclick="labtops()">
+                <div class="main-categories-image main-i2"></div>
+                <h2 class="main-categories-header">Ноутбуки</h2>
+            </button>
+            <button onclick="pcs()">
+                <div class="main-categories-image main-i3"></div>
+                <h2 class="main-categories-header">Компьютеры</h2>
+            </button>
+            <button onclick="tablets()">
+                <div class="main-categories-image main-i4"></div>
+                <h2 class="main-categories-header">Планшеты</h2>
+            </button>
+            <button onclick="screens()">
+                <div class="main-categories-image main-i5"></div>
+                <h2 class="main-categories-header">Периферия</h2>
+            </button>
+            <button onclick="tvs()">
+                <div class="main-categories-image main-i6"></div>
+                <h2 class="main-categories-header">Телевизоры</h2>
+            </button>
+            <button onclick="audio()">
+                <div class="main-categories-image main-i7"></div>
+                <h2 class="main-categories-header">Аудио</h2>
+            </button>
+            <button>
+                <div class="main-categories-image main-i8"></div>
+                <h2 class="main-categories-header">Ещё...</h2>
+            </button>
+        </div>
+        <div class="main-items">
+            <div id="main-items-slider"></div>
+            <div id="main-items-container"></div>
+        </div>
+    </header>
+    <header id="cart">
+        <div id="cart-header">Ваша корзина</div>
+        <div id="cart-items"></div>
+        <button id="cart-button" onclick="closeCart()">Оформить заказ</button>
+    </header>
+</body>
+</html>
